@@ -1,5 +1,11 @@
 import Image from 'next/image'
 import logoNode from '@/images/logos/node.svg'
+import img1 from '@/images/image-1.jpg'
+import img2 from '@/images/image-2.jpg'
+import img3 from '@/images/image-3.jpg'
+import img4 from '@/images/image-4.jpg'
+import img5 from '@/images/image-5.jpg'
+import {SlideShow} from '@/components/SlideShow'
 
 export const metadata = {
   title: 'Graph',
@@ -62,3 +68,4 @@ The output is
 ```
 
 <ImageWrapper image={logoNode}/>
+<SlideShow images={[img1,img2,img3,img4,img5]}/>
