@@ -1,7 +1,5 @@
-
-
-import background from './background1.jpg'
-import background2 from './item2.png'
+import Image from 'next/image'
+import logoNode from '@/images/logos/node.svg'
 
 export const metadata = {
   title: 'Graph',
@@ -63,7 +61,4 @@ The output is
 [2, 8, 12, 6, 3, 1, 3, 9]
 ```
 
-
-
-<ImageWrapper src={background} width="900" alt="Binary Search" />
-<SlideShow images={[background,background2]}/>
+<ImageWrapper image={logoNode}/>

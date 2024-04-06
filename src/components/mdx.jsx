@@ -10,16 +10,24 @@ import { Feedback } from '@/components/Feedback'
 import { Heading } from '@/components/Heading'
 import { Prose } from '@/components/Prose'
 
-// Dynamic import of SlideShow
-const SlideShow = dynamic(() => import('@/components/SlideShow'), { ssr: false });
 
-// Export SlideShow
-export { SlideShow };
 
 
 export const a = Link
 export { Button } from '@/components/Button'
 export { CodeGroup, Code as code, Pre as pre } from '@/components/Code'
+
+export function ImageWrapper({image}) {
+  return (
+    
+            <Image
+              src={image}
+              alt="photo"
+              unoptimized
+            />
+  )
+}
+
 
 
 export function wrapper({ children }) {
@@ -33,17 +41,6 @@ export function wrapper({ children }) {
   )
 }
 
-export function ImageWrapper({ src , width=500, height=500, alt= ''}) {
-  return(
-    <Image
-      src={src}
-      width={width}
-      height={height}
-      alt={alt}
-    />
-
-  )
-}
 
 
 export const h2 = function H2(props) {

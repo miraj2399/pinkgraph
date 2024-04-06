@@ -1,5 +1,4 @@
 import nextMDX from '@next/mdx'
-
 import { recmaPlugins } from './src/mdx/recma.mjs'
 import { rehypePlugins } from './src/mdx/rehype.mjs'
 import { remarkPlugins } from './src/mdx/remark.mjs'
@@ -13,10 +12,13 @@ const withMDX = nextMDX({
   },
 })
 
-/** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
+  images: {
+    loader: 'imgix',
+    path: '/',
+  },
 }
 
 export default withSearch(withMDX(nextConfig))
