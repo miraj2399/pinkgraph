@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - main
-      - feature/deploy-nextjs-to-s3
 jobs:
   build:
     runs-on: ubuntu-latest
