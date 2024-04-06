@@ -1,6 +1,4 @@
 
-import dynamic from 'next/dynamic';
-
 // Other imports...
 import Link from 'next/link'
 import clsx from 'clsx'
